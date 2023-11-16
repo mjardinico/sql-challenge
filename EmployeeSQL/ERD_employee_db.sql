@@ -6,12 +6,6 @@
 -- DROP TABLE IF EXISTS titles;
 -- DROP TABLE IF EXISTS employee_titles;
 
--- Drop Constraints
--- ALTER TABLE employee_titles DROP CONSTRAINTS "pk_employee_titles"; 
--- ALTER TABLE employee_titles DROP CONSTRAINTS "fk_employee_titles_emp_no";
--- ALTER TABLE employee_titles DROP CONSTRAINTS "fk_employee_titles_title_id";
-
-
 
 CREATE TABLE IF NOT EXISTS employees (
     emp_no INT NOT NULL,
@@ -30,12 +24,13 @@ CREATE TABLE IF NOT EXISTS departments (
     PRIMARY KEY (dept_no)
 );
 
-CREATE TABLE IF NOT EXISTS dept_emp (
-    dept_no VARCHAR(10) NOT NULL,
+CREATE TABLE IF NOT EXISTS dept_emp (    
     emp_no INT NOT NULL,
-    PRIMARY KEY (dept_no, emp_no),
-    FOREIGN KEY (dept_no) REFERENCES departments(dept_no),
-    FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
+	dept_no VARCHAR(10) NOT NULL,
+    PRIMARY KEY (emp_no, dept_no),
+	FOREIGN KEY (emp_no) REFERENCES employees(emp_no),
+    FOREIGN KEY (dept_no) REFERENCES departments(dept_no)
+    
 );
 
 CREATE TABLE IF NOT EXISTS dept_manager (
@@ -59,10 +54,10 @@ CREATE TABLE IF NOT EXISTS titles (
 );
 	
 -- Create a junction table
-CREATE TABLE IF NOT EXISTS "employee_titles" (
-    "emp_no" INT NOT NULL,
-    "title_id" VARCHAR(10) NOT NULL,
-    CONSTRAINT "pk_employee_titles" PRIMARY KEY ("emp_no", "title_id"),
-    CONSTRAINT "fk_employee_titles_emp_no" FOREIGN KEY ("emp_no") REFERENCES "employees" ("emp_no"),
-    CONSTRAINT "fk_employee_titles_title_id" FOREIGN KEY ("title_id") REFERENCES "titles" ("title_id")
-);
+-- CREATE TABLE IF NOT EXISTS "employee_titles" (
+--     "emp_no" INT NOT NULL,
+--     "title_id" VARCHAR(10) NOT NULL,
+--     CONSTRAINT "pk_employee_titles" PRIMARY KEY ("emp_no", "title_id"),
+--     CONSTRAINT "fk_employee_titles_emp_no" FOREIGN KEY ("emp_no") REFERENCES "employees" ("emp_no"),
+--     CONSTRAINT "fk_employee_titles_title_id" FOREIGN KEY ("title_id") REFERENCES "titles" ("title_id")
+-- );
