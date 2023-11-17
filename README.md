@@ -1,10 +1,10 @@
 # Module 9 Challenge: 
 ### SQL Challenge
 #### Title: Pewlett Hackard Employee Database Project
-Author:  Michael Jardinico 
+```Author:  Michael Jardinico 
 Version: 1.0 
 Date Created: 11/16/2023
-
+```
 ## Overview
 ```This project involves creating and analyzing a database for Pewlett Hackard, a fictional company. The focus is on employees from the 1980s and 1990s, with data stored across six CSV files. The project encompasses data modeling, data engineering, and data analysis.```
 
