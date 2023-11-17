@@ -49,6 +49,7 @@ Data Import: Import each CSV file into its corresponding SQL table.
 - Complete ERD or table schemas for all tables.
 ```https://github.com/mjardinico/sql-challenge/blob/main/QuickDBD-table_schemas.sql``` 
 
+
 **Data Engineering (70 points)**
 ```https://github.com/mjardinico/sql-challenge/blob/main/EmployeeSQL/ERD_employee_db.sql```
 
