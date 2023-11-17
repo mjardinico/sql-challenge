@@ -1,13 +1,13 @@
 # Module 9 Challenge: 
 ### SQL Challenge
 #### Title: Pewlett Hackard Employee Database Project
-**Author:**  Michael Jardinico  
-**Version:** 1.0  
-**Date Created:** 11/16/2023
+Author:  Michael Jardinico 
+Version: 1.0 
+Date Created: 11/16/2023
 
 ## Overview
-'''This project involves creating and analyzing a database for Pewlett Hackard, a fictional company. The focus is on employees from the 1980s and 1990s, with data stored across six CSV files. The project encompasses data modeling, data engineering, and data analysis.
-'''
+```This project involves creating and analyzing a database for Pewlett Hackard, a fictional company. The focus is on employees from the 1980s and 1990s, with data stored across six CSV files. The project encompasses data modeling, data engineering, and data analysis.```
+
 ## Getting Started
 ### Before You Begin
 - Repository Setup: Create a new repository named sql-challenge.
@@ -45,8 +45,11 @@ Data Import: Import each CSV file into its corresponding SQL table.
 ### Requirements
 **Data Modeling (10 points)**
 - Complete ERD or table schemas for all tables.
+```https://github.com/mjardinico/sql-challenge/blob/main/QuickDBD-table_schemas.sql``` 
 
 **Data Engineering (70 points)**
+```https://github.com/mjardinico/sql-challenge/blob/main/EmployeeSQL/ERD_employee_db.sql```
+
 - Define all required columns for each table.
 - Assign correct data types to columns.
 - Set primary keys for each table.
